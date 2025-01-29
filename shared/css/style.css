@@ -408,10 +408,11 @@ a
 .news-item
 {
     width: 100%;
+    height: fit-content;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     transition: all 0.25s 0s ease;
 }
 
@@ -424,15 +425,17 @@ a
 .news-item-image
 {
     border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 15px;
-    width: 95%;
+    width: 92.5%;
     height: auto;
 }
 
 .news-item-date
 {
     margin-top: 10px;
-    margin-left: 15px;
+    margin-left: 20px;
     margin-right: auto;
     margin-bottom: 5px;
     font-family: "M PLUS 1";
@@ -441,8 +444,8 @@ a
 
 .news-item-title
 {
-    margin-left: 15px;
-    margin-right: auto;
+    margin-left: 20px;
+    margin-right: 4%;
     margin-bottom: 20px;
     font-size: larger;
     font-family: "Sawarabi Gothic";
@@ -452,7 +455,7 @@ a
 
 .news-more
 {
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 10px;
 }
 
@@ -511,5 +514,18 @@ a
 {
     font-family: "Cabin";
     font-weight: 600;
+}
+
+.news-content-container
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
 }
 
