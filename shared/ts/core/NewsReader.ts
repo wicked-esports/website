@@ -12,9 +12,20 @@ export class NewsReader
         for (const element of data) {
             const articleResponse = await fetch(base + "news_articles/articles/" + element + ".json");
             const articleData = await articleResponse.json();
-            dest.push(NewsData.fromJson(articleData));
+            dest.push(NewsData.fromJson(element, articleData));
         }
 
         return dest;
+    }
+
+    public static async getNews(id: string)
+    {
+        const articleResponse = await fetch("../../news_articles/articles/" + id + ".json");
+        if (articleResponse.ok)
+        {
+            const articleData = await articleResponse.json();
+            return NewsData.fromJson(id, articleData);
+        } 
+        else return null;
     }
 }

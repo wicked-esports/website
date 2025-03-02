@@ -1,7 +1,27 @@
 {
-    "id": "2024-01-25",
-    "title": "This is a test article. so don't worry about it.",
+    "title": "【朗報！】テスト記事！",
     "image": "WELCOME.png",
-    "content": "TESTTESTTESTHAHAHAHAHHA",
+    "content": [
+        {
+            "type": "md",
+            "content": [
+                "# これはテストの記事なんだよね！",
+                "**うんこうんこうんこうんっこううんこうんこうのこうんｐこうのこうのこう**",
+                "[ここをクリック](https://google.com/)してうんこをしよう！"
+            ]
+        },
+        {
+            "type": "img",
+            "content": "WELCOME.png"
+        },
+        {
+            "type": "md",
+            "content": [
+                "# これはテストの記事なんだよね！",
+                "うんこうんこうんこうんっこううんこうんこうのこうんｐこうのこうのこう",
+                "[ここをクリック](https://google.com/)してうんこをしよう！"
+            ]
+        }
+    ],
     "date": "2024-01-25"
 }

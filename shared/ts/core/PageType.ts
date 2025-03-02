@@ -4,4 +4,7 @@ export enum PageType
     News,
     Member,
     Sponsor,
+    Article,
+    Contact,
+    About
 }

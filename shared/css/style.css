@@ -42,6 +42,11 @@ a
     position: relative;
 }
 
+a:active
+{
+    background: rgba(147, 83, 237, 0.3);
+}
+
 .header-item-link::after 
 {
     position: absolute;
@@ -106,7 +111,8 @@ a
         margin-top: 80px;
     }
     .about-title-span,
-    .news-title-span
+    .news-title-span,
+    .sponsor-title-span
     {
         font-size: xx-large;
     }
@@ -114,6 +120,37 @@ a
     {
         grid-template-columns: repeat(3, 1fr);
         gap: 3.75%;
+    }
+    .footer-container
+    {
+        margin: 50px;
+    }
+    .footer-logo
+    {
+        width: 6.5vw;
+    }
+    .footer-x-logo
+    {
+        width: 2.5vw;
+        margin-left: 40px;
+    }
+    .contact-form-container,
+    .contact-form-button
+    {
+        width: 50%;
+    }
+    .about-container
+    {
+        width: 70%;
+    }
+    .about-logo
+    {
+        width: 20%;
+    }
+    .footer-copyright,
+    .footer-credit
+    {
+        font-size: 0.875em;
     }
 }
 
@@ -142,7 +179,8 @@ a
         margin-top: 60px;
     }
     .about-title-span,
-    .news-title-span
+    .news-title-span,
+    .sponsor-title-span
     {
         font-size: xx-large;
     }
@@ -150,6 +188,37 @@ a
     {
         grid-template-columns: repeat(2, 1fr);
         gap: 3.75%;
+    }
+    .footer-container
+    {
+        margin: 70px;
+    }
+    .footer-logo
+    {
+        width: 11vw;
+    }
+    .footer-x-logo
+    {
+        width: 5vw;
+        margin-left: 40px;
+    }
+    .contact-form-container,
+    .contact-form-button
+    {
+        width: 70%;
+    }
+    .about-container
+    {
+        width: 85%;
+    }
+    .about-logo
+    {
+        width: 35%;
+    }
+    .footer-copyright,
+    .footer-credit
+    {
+        font-size: 0.75em;
     }
 }
 
@@ -181,7 +250,8 @@ a
         margin-top: 40px;
     }
     .about-title-span,
-    .news-title-span
+    .news-title-span,
+    .sponsor-title-span
     {
         font-size: x-large;
     }
@@ -189,6 +259,47 @@ a
     {
         grid-template-columns: repeat(1, 1fr);
         gap: 0%;
+    }
+    .footer-container
+    {
+        margin: 30px;
+    }
+    .footer-logo
+    {
+        width: 12vw;
+    }
+    .footer-x-logo
+    {
+        width: 6vw;
+        margin-left: 20px;
+    }
+    .footer-copyright
+    {
+        text-wrap-mode: nowrap;
+        font-size: x-small;
+    }
+    .article-notfound-text
+    {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .contact-form-container,
+    .contact-form-button
+    {
+        width: 95%;
+    }
+    .about-container
+    {
+        width: 100%;
+    }
+    .about-logo
+    {
+        width: 50%;
+    }
+    .footer-copyright,
+    .footer-credit
+    {
+        font-size: 0.25em;
     }
 }
 
@@ -357,7 +468,9 @@ a
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     opacity: 0;
+    min-height: calc(100vh - var(--header-height));
 }
 
 .main-background-image
@@ -393,7 +506,7 @@ a
 
 .news-title-span
 {
-    font-family: "Cabin";
+    font-family: "Schibsted Grotesk";
     font-weight: 600;
 }
 
@@ -444,19 +557,19 @@ a
 
 .news-item-title
 {
-    margin-left: 20px;
-    margin-right: 4%;
+    margin-left: 17.5px;
+    margin-right: 17.5px;
     margin-bottom: 20px;
     font-size: larger;
-    font-family: "Sawarabi Gothic";
-    font-weight: 400;
+    font-family: "Noto Sans JP";
+    font-weight: 500;
     word-break: break-all;
 }
 
 .news-more
 {
     margin-top: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 
 .news-more-span
@@ -493,29 +606,6 @@ a
     transform-origin: left top;
 }
 
-.about-container
-{
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-title
-{
-    margin-top: 50px;
-    margin-left: 0px;
-    margin-right: auto;
-    margin-bottom: 20px;
-}
-
-.about-title-span
-{
-    font-family: "Cabin";
-    font-weight: 600;
-}
-
 .news-content-container
 {
     margin-left: auto;
@@ -527,5 +617,319 @@ a
     justify-content: center;
     align-items: center;
     margin-bottom: 100px;
+}
+
+.footer-root
+{
+    width: 100%;
+    background: #000;
+    margin-top: auto;
+}
+
+.footer-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.footer-logo
+{
+    filter: invert(100%);
+}
+
+.footer-logo-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+}
+
+.footer-x-logo-img
+{
+    width: 100%;
+}
+
+.footer-other-container
+{
+    margin-left: auto;
+}
+
+.footer-copyright
+{
+    font-family: "M PLUS 1";
+    font-weight: 200;
+    color: white;
+}
+
+.footer-credit
+{
+    font-family: "M PLUS 1";
+    font-weight: 200;
+    color: white;
+}
+
+.footer-credit-link
+{
+    font-family: "M PLUS 1";
+    font-weight: 200;
+    color: white;
+}
+
+.article-root
+{
+    width: 100%;
+    box-sizing: content-box;
+}
+
+.article-notfound-container
+{
+    margin-top: 150px;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.article-notfound-text
+{
+    font-family: "Noto Sans JP";
+    font-weight: 600;
+    font-size: x-large;
+}
+
+.article-container
+{
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-title-container
+{
+    width: 70%;
+}
+
+.article-title
+{
+    font-family: "Noto Sans JP";
+    font-weight: 600;
+    font-size: xx-large;
+}
+
+.article-img
+{
+    width: 70%;
+    margin: 0px;
+}
+
+.article-content-markdown
+{
+    width: 70%;
+}
+
+.article-content-markdown h1
+{
+    font-family: "Noto Sans JP";
+}
+
+.article-content-markdown p
+{
+    font-size: large;
+    font-family: "Noto Sans JP";
+    margin: 0 10px;
+}
+
+.article-content-markdown a
+{
+    color: #9353ed;
+}
+
+.article-content-img
+{
+    width: 50%;
+    margin: 40px 40px;
+}
+
+.sponsor-container
+{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sponsor-title
+{
+    margin-top: 50px;
+    margin-left: 0px;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.sponsor-title-span
+{
+    font-family: "Schibsted Grotesk";
+    font-weight: 600;
+}
+
+.sponsor-text
+{
+    margin-top: 60px;
+    font-size: large;
+    font-family: "Noto Sans JP";
+    font-weight: 500;
+    text-align: center;
+}
+
+.sponsor-text a 
+{
+    color: #9353ed;
+}
+
+.contact-form
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 5px 0px;
+    
+}
+
+.contact-form-label
+{
+    width: auto;
+    width: fit-content;
+    font-family: "Noto Sans JP";
+    margin-bottom: 4px;
+}
+
+.contact-form-text-input
+{
+    font-family: "Noto Sans JP";
+    width: calc(100% - 0.5em - 2px);
+    padding: 0.5em 0.5em;
+    margin: 0;
+    margin-left: calc(-0.25em - 1px);
+    font-size: 0.9rem;
+    outline: 0;
+    border-radius: 0.375rem;
+    border: 1px solid #B0B0B0;
+}
+
+.contact-form-text-input:focus
+{
+    border: 2px solid #9353ed;
+}
+
+.contact-form-main-input
+{
+    font-family: "Noto Sans JP";
+    width: calc(100% - 0.5em - 2px);
+    font-size: 0.9rem;
+    padding: 0.5em 0.5em;
+    margin-left: calc(-0.25em - 1px);
+    outline: 0;
+    border-radius: 0.375rem;
+    border: 1px solid #B0B0B0;
+    resize: vertical;
+}
+
+.contact-form-main-input:focus
+{
+    border: 2px solid #9353ed;
+}
+
+.contact-form-button
+{
+    font-family: "Noto Sans JP";
+    margin-top: 30px;
+    margin-bottom: 0;
+    border-radius: 0.375rem;
+    border: 0;
+    padding: 0.875em 0px;
+    color: white;
+    background: linear-gradient(150deg, rgba(0, 0, 0, 1), rgba(88, 51, 140, 1));
+    transition: 0.25s all;
+}
+
+.contact-form-button:hover
+{
+    opacity: 0.8;
+}
+
+.contact-form-result
+{
+    margin-left: 10px;
+    width: 50%;
+}
+
+.about-first-text
+{
+    font-family: "Noto Sans JP";
+    font-weight: 500;
+    font-size: x-large;
+}
+
+.about-container
+{
+    margin: 20px 0;
+}
+
+.about-label
+{
+    font-family: "Schibsted Grotesk";
+    font-weight: 600;
+    font-size: 2em;
+}
+
+.about-text
+{
+    width: 90%;
+    font-family: "Noto Sans JP";
+    font-weight: 500;
+    font-size: larger;
+    margin: 0px auto;
+}
+
+.about-value-container
+{
+    width: 95%;
+    margin: 20px auto;
+    
+}
+
+.about-value-label
+{
+    font-family: "Schibsted Grotesk";
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-bottom: 16px;
+}
+
+.about-value-text
+{
+    width: 90%;
+    font-family: "Noto Sans JP";
+    font-weight: 500;
+    font-size: large;
+    margin: 0px auto;
 }
 

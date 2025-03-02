@@ -1,8 +1,9 @@
+import { NewsData } from "./core/data/NewsData";
 import { NewsReader } from "./core/NewsReader";
 
 const newsItemsContainer = document.getElementsByClassName("news-items")[0];
 
-function onNewsLoad(n: number)
+function onNewsLoad()
 {
     while (newsItemsContainer.firstChild) 
     {
@@ -17,8 +18,9 @@ function onNewsLoad(n: number)
             {       
                 const news = data[i];
         
-                const newsItem = document.createElement("div");
+                const newsItem = document.createElement("a");
                 newsItem.classList.add("news-item");
+                newsItem.href = `./article/?id=${news.id}`
 
                 const newsItemTitle = document.createElement("span");
                 newsItemTitle.classList.add("news-item-title");
